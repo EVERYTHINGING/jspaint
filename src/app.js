@@ -2,8 +2,8 @@
 const default_magnification = 1;
 const default_tool = get_tool_by_id(TOOL_PENCIL);
 
-const default_canvas_width = 683;
-const default_canvas_height = 384;
+const default_canvas_width = 256;
+const default_canvas_height = 256;
 let my_canvas_width = default_canvas_width;
 let my_canvas_height = default_canvas_height;
 
@@ -671,6 +671,9 @@ const $H = $(E("div")).addClass("horizontal").appendTo($V);
 const $canvas_area = $(E("div")).addClass("canvas-area inset-deep").appendTo($H);
 
 const $canvas = $(main_canvas).appendTo($canvas_area);
+
+$('<div><img src="http://placekitten.com/900/900" /></div>').appendTo($canvas_area);
+
 $canvas.css("touch-action", "none");
 let canvas_bounding_client_rect = main_canvas.getBoundingClientRect(); // cached for performance, updated later
 const canvas_handles = new Handles({

@@ -724,7 +724,8 @@
 					"help topics", "help me", "show help", "help", "show help window", "show help topics", "open help",
 					"help viewer", "show help viewer", "open help viewer",
 				],
-				action: () => { show_help(); },
+				action: () => { /*show_help();*/ },
+				enabled: () => false,
 				description: localize("Displays Help for the current task or command."),
 			},
 			MENU_DIVIDER,
@@ -911,6 +912,7 @@
 					},
 				]
 			},
+			/*
 			{
 				item: "💄 " + localize("&Themes"),
 				submenu: [
@@ -1035,7 +1037,9 @@
 						description: localize("Starts the ritual."),
 					},
 				]
+				
 			},
+			*/
 			{
 				item: "🌍 " + localize("&Language"),
 				submenu: available_languages.map((available_language) => (
